@@ -1,11 +1,15 @@
 package com.easynet.saas.entity;
 
+import com.easynet.orm.internal.annotation.Entity;
+
 import java.time.LocalDateTime;
 
 /**
  * 用户表
  */
+@Entity
 public class SysUser {
+
     private Long id;
     private String username;
     private String password;

@@ -1,4 +1,4 @@
-package com.easynet.saas.protocol;
+package com.easynet.saas.protocol.dto;
 
 /**
  * 菜单项DTO（菜单同步用）

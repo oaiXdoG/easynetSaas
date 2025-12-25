@@ -1,5 +1,7 @@
 package com.easynet.saas.protocol;
 
+import com.easynet.saas.protocol.dto.UserInfo;
+
 /**
  * 登录响应
  */

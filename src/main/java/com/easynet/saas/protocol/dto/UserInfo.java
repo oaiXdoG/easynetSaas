@@ -1,7 +1,7 @@
-package com.easynet.saas.protocol;
+package com.easynet.saas.protocol.dto;
 
 /**
- * 用户信息
+ * 用户信息DTO（登录响应用）
  */
 public class UserInfo {
     private Long id;

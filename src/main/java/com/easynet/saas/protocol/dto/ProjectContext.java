@@ -1,9 +1,9 @@
-package com.easynet.saas.protocol;
+package com.easynet.saas.protocol.dto;
 
 import java.util.List;
 
 /**
- * 项目上下文（用户切换项目后的上下文信息）
+ * 项目上下文DTO（用户切换项目后的上下文信息）
  */
 public class ProjectContext {
     private Long projectId;

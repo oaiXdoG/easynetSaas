@@ -1,5 +1,8 @@
 package com.easynet.saas.protocol;
 
+import com.easynet.saas.protocol.dto.MenuGroupDTO;
+import com.easynet.saas.protocol.dto.MenuItemDTO;
+
 import java.util.List;
 
 /**
