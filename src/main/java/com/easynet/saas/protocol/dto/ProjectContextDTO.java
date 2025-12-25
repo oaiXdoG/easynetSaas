@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 项目上下文DTO（用户切换项目后的上下文信息）
  */
-public class ProjectContext {
+public class ProjectContextDTO {
     private Long projectId;
     private String projectName;
     private Long roleId;
