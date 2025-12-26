@@ -1,39 +1,45 @@
 package com.easynet.saas.protocol;
 
+import com.easynet.saas.common.ErrorCode;
+
 /**
  * 统一响应结构
  */
 public class ApiResponse<T> {
-    private Integer code;
+    private int code;
     private String message;
     private T data;
 
     public ApiResponse() {
     }
 
-    public ApiResponse(Integer code, String message, T data) {
+    public ApiResponse(int code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
     }
 
     public static <T> ApiResponse<T> success(T data) {
-        return new ApiResponse<>(200, "success", data);
+        return new ApiResponse<>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), data);
     }
 
     public static <T> ApiResponse<T> success() {
-        return new ApiResponse<>(200, "success", null);
+        return new ApiResponse<>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), null);
     }
 
-    public static <T> ApiResponse<T> error(Integer code, String message) {
-        return new ApiResponse<>(code, message, null);
+    public static <T> ApiResponse<T> error(ErrorCode errorCode) {
+        return new ApiResponse<>(errorCode.getCode(), errorCode.getMessage(), null);
     }
 
-    public Integer getCode() {
+    public static <T> ApiResponse<T> error(ErrorCode errorCode, String message) {
+        return new ApiResponse<>(errorCode.getCode(), message, null);
+    }
+
+    public int getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(int code) {
         this.code = code;
     }
 

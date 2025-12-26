@@ -6,20 +6,20 @@ import java.time.LocalDateTime;
  * 项目表
  */
 public class SysProject {
-    private Long id;
+    private long id;
     private String projectName;
     private String description;
-    private Long ownerId;
-    private Integer status;
-    private Long createdBy;
+    private long ownerId;
+    private int status;
+    private long createdBy;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -39,27 +39,27 @@ public class SysProject {
         this.description = description;
     }
 
-    public Long getOwnerId() {
+    public long getOwnerId() {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
+    public void setOwnerId(long ownerId) {
         this.ownerId = ownerId;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public Long getCreatedBy() {
+    public long getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(Long createdBy) {
+    public void setCreatedBy(long createdBy) {
         this.createdBy = createdBy;
     }
 

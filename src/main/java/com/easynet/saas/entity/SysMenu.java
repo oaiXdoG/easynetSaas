@@ -6,42 +6,42 @@ import java.time.LocalDateTime;
  * 菜单表
  */
 public class SysMenu {
-    private Long id;
-    private Long groupId;
-    private Long parentId;
+    private long id;
+    private long groupId;
+    private long parentId;
     private String menuCode;
     private String menuName;
-    private Integer menuType;
+    private int menuType;
     private String icon;
     private String path;
     private String component;
-    private Integer isHidden;
-    private Integer sortOrder;
-    private Integer status;
+    private int isHidden;
+    private int sortOrder;
+    private int status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getGroupId() {
+    public long getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(Long groupId) {
+    public void setGroupId(long groupId) {
         this.groupId = groupId;
     }
 
-    public Long getParentId() {
+    public long getParentId() {
         return parentId;
     }
 
-    public void setParentId(Long parentId) {
+    public void setParentId(long parentId) {
         this.parentId = parentId;
     }
 
@@ -61,11 +61,11 @@ public class SysMenu {
         this.menuName = menuName;
     }
 
-    public Integer getMenuType() {
+    public int getMenuType() {
         return menuType;
     }
 
-    public void setMenuType(Integer menuType) {
+    public void setMenuType(int menuType) {
         this.menuType = menuType;
     }
 
@@ -93,27 +93,27 @@ public class SysMenu {
         this.component = component;
     }
 
-    public Integer getIsHidden() {
+    public int getIsHidden() {
         return isHidden;
     }
 
-    public void setIsHidden(Integer isHidden) {
+    public void setIsHidden(int isHidden) {
         this.isHidden = isHidden;
     }
 
-    public Integer getSortOrder() {
+    public int getSortOrder() {
         return sortOrder;
     }
 
-    public void setSortOrder(Integer sortOrder) {
+    public void setSortOrder(int sortOrder) {
         this.sortOrder = sortOrder;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 

@@ -9,25 +9,24 @@ import java.time.LocalDateTime;
  */
 @Entity
 public class SysUser {
-
-    private Long id;
+    private long id;
     private String username;
     private String password;
     private String email;
     private String phone;
     private String realName;
     private String avatar;
-    private Integer isSuperAdmin;
-    private Integer status;
+    private int isSuperAdmin;
+    private int status;
     private LocalDateTime lastLoginAt;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -79,19 +78,19 @@ public class SysUser {
         this.avatar = avatar;
     }
 
-    public Integer getIsSuperAdmin() {
+    public int getIsSuperAdmin() {
         return isSuperAdmin;
     }
 
-    public void setIsSuperAdmin(Integer isSuperAdmin) {
+    public void setIsSuperAdmin(int isSuperAdmin) {
         this.isSuperAdmin = isSuperAdmin;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 

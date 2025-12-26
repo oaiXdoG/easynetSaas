@@ -6,32 +6,32 @@ import java.time.LocalDateTime;
  * 项目启用菜单表
  */
 public class SysProjectMenu {
-    private Long id;
-    private Long projectId;
-    private Long menuId;
+    private long id;
+    private long projectId;
+    private long menuId;
     private LocalDateTime createdAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Long projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
 
-    public Long getMenuId() {
+    public long getMenuId() {
         return menuId;
     }
 
-    public void setMenuId(Long menuId) {
+    public void setMenuId(long menuId) {
         this.menuId = menuId;
     }
 

@@ -6,27 +6,27 @@ import java.time.LocalDateTime;
  * 角色表（项目级）
  */
 public class SysRole {
-    private Long id;
-    private Long projectId;
+    private long id;
+    private long projectId;
     private String roleName;
     private String description;
-    private Integer status;
+    private int status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Long projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
 
@@ -46,11 +46,11 @@ public class SysRole {
         this.description = description;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 

@@ -6,19 +6,19 @@ import java.time.LocalDateTime;
  * 菜单分组表
  */
 public class SysMenuGroup {
-    private Long id;
+    private long id;
     private String groupCode;
     private String groupTitle;
-    private Integer sortOrder;
-    private Integer status;
+    private int sortOrder;
+    private int status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -38,19 +38,19 @@ public class SysMenuGroup {
         this.groupTitle = groupTitle;
     }
 
-    public Integer getSortOrder() {
+    public int getSortOrder() {
         return sortOrder;
     }
 
-    public void setSortOrder(Integer sortOrder) {
+    public void setSortOrder(int sortOrder) {
         this.sortOrder = sortOrder;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 

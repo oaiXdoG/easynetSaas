@@ -6,42 +6,42 @@ import java.time.LocalDateTime;
  * 操作日志表
  */
 public class SysOperationLog {
-    private Long id;
-    private Long userId;
-    private Long projectId;
+    private long id;
+    private long userId;
+    private long projectId;
     private String module;
     private String action;
     private String description;
     private String requestMethod;
     private String requestUrl;
     private String requestParams;
-    private Integer responseCode;
+    private int responseCode;
     private String ip;
     private String userAgent;
-    private Integer executionTime;
+    private int executionTime;
     private LocalDateTime createdAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
-    public Long getProjectId() {
+    public long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Long projectId) {
+    public void setProjectId(long projectId) {
         this.projectId = projectId;
     }
 
@@ -93,11 +93,11 @@ public class SysOperationLog {
         this.requestParams = requestParams;
     }
 
-    public Integer getResponseCode() {
+    public int getResponseCode() {
         return responseCode;
     }
 
-    public void setResponseCode(Integer responseCode) {
+    public void setResponseCode(int responseCode) {
         this.responseCode = responseCode;
     }
 
@@ -117,11 +117,11 @@ public class SysOperationLog {
         this.userAgent = userAgent;
     }
 
-    public Integer getExecutionTime() {
+    public int getExecutionTime() {
         return executionTime;
     }
 
-    public void setExecutionTime(Integer executionTime) {
+    public void setExecutionTime(int executionTime) {
         this.executionTime = executionTime;
     }
 

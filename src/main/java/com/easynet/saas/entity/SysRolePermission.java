@@ -6,32 +6,32 @@ import java.time.LocalDateTime;
  * 角色-权限关系表
  */
 public class SysRolePermission {
-    private Long id;
-    private Long roleId;
-    private Long permissionId;
+    private long id;
+    private long roleId;
+    private long permissionId;
     private LocalDateTime createdAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getRoleId() {
+    public long getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(long roleId) {
         this.roleId = roleId;
     }
 
-    public Long getPermissionId() {
+    public long getPermissionId() {
         return permissionId;
     }
 
-    public void setPermissionId(Long permissionId) {
+    public void setPermissionId(long permissionId) {
         this.permissionId = permissionId;
     }
 

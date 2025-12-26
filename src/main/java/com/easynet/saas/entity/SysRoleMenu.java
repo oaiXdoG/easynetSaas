@@ -6,32 +6,32 @@ import java.time.LocalDateTime;
  * 角色-菜单关系表
  */
 public class SysRoleMenu {
-    private Long id;
-    private Long roleId;
-    private Long menuId;
+    private long id;
+    private long roleId;
+    private long menuId;
     private LocalDateTime createdAt;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public Long getRoleId() {
+    public long getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(long roleId) {
         this.roleId = roleId;
     }
 
-    public Long getMenuId() {
+    public long getMenuId() {
         return menuId;
     }
 
-    public void setMenuId(Long menuId) {
+    public void setMenuId(long menuId) {
         this.menuId = menuId;
     }
 
