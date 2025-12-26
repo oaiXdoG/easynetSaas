@@ -5,11 +5,13 @@ import com.easynet.core.internal.anno.Packet;
 import com.easynet.core.internal.session.Session;
 import com.easynet.orm.Orm;
 import com.easynet.saas.common.ErrorCode;
+import com.easynet.saas.util.TokenCache;
 import com.easynet.saas.common.UserConstants;
 import com.easynet.saas.entity.SysUser;
 import com.easynet.saas.protocol.ApiResponse;
 import com.easynet.saas.protocol.LoginRequest;
 import com.easynet.saas.protocol.LoginResponse;
+import com.easynet.saas.protocol.LogoutRequest;
 import com.easynet.saas.protocol.dto.UserInfoDTO;
 import com.easynet.utils.JwtUtils;
 import com.easynet.utils.Md5Utils;
@@ -41,13 +43,15 @@ public class LoginController {
             return;
         }
 
-        sysUser.setLastLoginAt(LocalDateTime.now());
         Orm.update(SysUser.class)
                 .eq(SysUser::getId, sysUser.getId())
                 .set(SysUser::getLastLoginAt, LocalDateTime.now())
                 .exec();
 
         String token = JwtUtils.generateToken(sysUser.getId());
+        // 存入缓存
+        TokenCache.put(sysUser.getId(), token);
+
         LoginResponse response = new LoginResponse();
         UserInfoDTO userInfo = new UserInfoDTO();
         userInfo.setId(sysUser.getId());
@@ -59,5 +63,26 @@ public class LoginController {
         response.setToken(token);
 
         Net.send(session, ApiResponse.success(response));
+    }
+
+    @Packet
+    public void onLogoutRequest(Session session, LogoutRequest logoutRequest) {
+        String token = logoutRequest.getToken();
+
+        if (token == null || token.isEmpty()) {
+            Net.send(session, ApiResponse.error(ErrorCode.TOKEN_INVALID));
+            return;
+        }
+
+        long userId = JwtUtils.parseToken(token);
+        if (userId <= 0) {
+            Net.send(session, ApiResponse.error(ErrorCode.TOKEN_INVALID));
+            return;
+        }
+
+        // 从缓存删除
+        TokenCache.remove(userId);
+
+        Net.send(session, ApiResponse.success());
     }
 }
